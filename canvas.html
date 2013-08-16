@@ -13,12 +13,11 @@
             var context = canvas.getContext('2d');
             context.fillStyle = "#EEEEFF";
             context.fillRect(0, 0, 400, 300);
-            context.fillStyle = "red";
-            context.strokeStyle = "blue";
-            context.lineWidth = 5; 
-            context.fillRect(50, 50, 100, 100);
-            context.strokeRect(50, 50, 100, 100);
-            // context.translate(100,100)
+            context.beginPath();
+            context.moveTo(10,10);
+            context.lineTo(50,10);
+            context.closePath();
+            context.stroke();
         }
 
         function drawArc(id) {
