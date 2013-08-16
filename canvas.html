@@ -32,6 +32,9 @@
             context.beginPath();
             context.arc(60,60,50,0,Math.PI*2,false);
             context.closePath();
+            context.moveTo(210, 160);
+            context.arc(160,160,50,0,Math.PI*2,false);
+            context.closePath();
             context.strokeStyle = "blue";
             // context.fill();
             context.stroke();
@@ -132,6 +135,22 @@
             context.stroke();
             context.fill();
         }
+
+        function drawText(id) {
+            var canvas = document.getElementById(id);
+            if(canvas == null) {
+                return false;
+            }
+            var context = canvas.getContext('2d');
+            context.fillStyle = "#EEEEFF";
+            context.fillRect(0, 0, 400, 300);
+            context.fillStyle = "red";
+            context.strokeStyle = "red";
+            context.lineWidth = 2;
+            context.font = "40px sans-serif";
+            //context.textAlign = "center";
+            context.strokeText('frjeigjeogjrei', 50, 50);
+        }
         function polygon(c, n, x, y, r, angle, counterclockwise) {
             angle = angle || 0;
             counterclockwise = counterclockwise || false;
@@ -156,6 +175,7 @@
             drawArc('canvas4');
             drawArcTo('canvas5');
             drawBezier('canvas6')
+            drawText('canvas7');
         }
     </script>
 </head>
@@ -168,5 +188,6 @@
     <canvas id="canvas4" width="400" height="300"></canvas>
     <canvas id="canvas5" width="400" height="300"></canvas>
     <canvas id="canvas6" width="400" height="300"></canvas>
+    <canvas id="canvas7" width="400" height="300"></canvas>
 </body>
 </html>
