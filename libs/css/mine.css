@@ -1,0 +1,317 @@
+/*网站个性化css,配合bootstrap*/
+body{
+    background: #e5e5e5 url(../images/mooning.png);
+    overflow-x: hidden;
+    -webkit-user-select: none; /*禁止用户选中*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*作用好像跟可点击的有关*/
+}
+
+img, p{
+    -webkit-touch-callout: none; /*禁止触摸保存图片的，但是没看见效果*/
+}
+
+p{
+    font: 500 15px/1.8 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+    cursor: default;
+}
+
+a:not(.btn){
+    color: #00699e;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    transition: 300ms;
+}
+a:hover:not(.btn),
+a:active:not(.btn){
+    color: #9E0000;
+    text-decoration: none;
+    -webkit-transform: translateY(-8px);/*鼠标放上的帅呆效果*/
+    -moz-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+
+.padding-huge{
+    padding: 27px;
+}
+
+.padding-large{
+    padding: 45px;
+}
+
+.padding-middle{
+    padding: 25px;
+}
+
+.no-radius{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+p.wo:first-letter{
+    font-size: 115%;
+    padding-right:1px;
+}
+
+.relative{
+    position: relative;
+}
+
+.button{
+    margin: 20px auto;
+}
+
+hr.soften{
+    height: 1px;
+    margin: 30px 0;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+	background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+	background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+	background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+    border: 0; /*漂亮的分割线*/
+}
+
+/* 部件
+-------------------------------------*/
+.nav a{
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    transition: 500ms;
+}
+
+header{
+    margin-top: 40px; /*不要跟导航条重合*/
+}
+
+.hero-unit{
+    background: url(../images/cover-5.jpg);
+    background-size: cover;
+    color: #fff;
+    height: 480px;
+    margin-bottom: 0;
+}
+
+.hero-unit h1{
+    font: 88px Minion,'Optima', "Times New Roman", Times, serif;
+    text-align: center;
+    text-shadow: 1px 1px 10px black;
+    -webkit-animation: title-in 1s ease-out 0 1;
+    transition: 500ms;
+}
+
+.hero-unit h1:hover{
+    -webkit-transform: translateY(-5px) scale(1.05) rotate(2deg);
+    -moz-transform: translateY(-5px) scale(1.05) rotate(2deg);
+    transform: translateY(-5px) scale(1.05) rotate(2deg);
+}
+
+.description{
+    position: relative;
+    margin-top: -245px;
+    -webkit-animation: description-in 1s ease-out 0 1;
+}
+.description h4,
+.description h5{
+    cursor: default; /*避免选择的鼠标出现*/
+}
+img.profile{
+    max-width: 100px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    -webkit-translation: 500ms;
+    -moz-translation: 500ms;
+    translation: 500ms;
+}
+img.profile:hover{
+    -webkit-animation: profile-img-hover 1s ease-out 100ms infinite;
+}
+img.profile:active{
+    -webkit-animation: profile-img-active 1s ease-out 100ms infinite;
+}
+/* = 框架 Panels
+-----------------------------------*/
+.panel{
+    background: #FFF url(../images/white_wall_hash.png);
+    padding: 0;
+    margin-bottom: 120px;
+    color: #333;
+    border-radius: 6px;
+    -webkit-animation: panel-in 1s;
+    box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+}
+.panel h1, .panel h3 {
+	cursor: default;
+	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 50%,rgba(10, 14, 10, 1) 51%,rgba(10, 8, 9, 1) 100%);
+	-webkit-box-reflect: below -7px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.2, transparent), to(rgba(3,3,3,.1)));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
+}
+.panel h3 {
+	-webkit-box-reflect: below -17px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
+}
+.panel h1:hover {
+	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 70%,rgba(10, 14, 10, 1) 71%,rgba(10, 8, 9, 1) 100%);
+	-webkit-box-reflect: below -2px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));	
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;	
+	-webkit-transform: translateY(-5px);
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
+}
+.panel-description{
+    background: rgba(255, 255, 255, 0.80);
+    color: #333;
+    padding: 0;
+    margin-bottom: 80px;
+    border-radius: 6px;
+    text-shadow: 1px 1px 2px #FFF;
+    -webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05); 
+	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);  
+	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+	box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+}
+
+.panel-description h4{
+    font: 500 18px/1.8 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+}
+
+.panel-description h5{
+    color: rgba(0, 0, 0, 0.6);
+    font: 400 14.5px/1.5 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+}
+
+.button-text-panel a{
+    display:inline-block;
+    margin: 0 10px;
+}
+
+.block-left{
+    padding: 35px 10px 15px 45px;
+}
+
+.block-center{
+    padding:30px;
+}
+.design{
+    padding: 0 5px 15px 45px;
+}
+.programming{
+    padding: 0 20px 10px 0;
+}
+/* = 动画 Animation
+-----------------------------------*/
+
+@-webkit-keyframes title-in{
+    from{
+        -webkit-transform: translateY(-50px);
+    }
+    to{
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes description-in{
+    from{
+        -webkit-transform: translateY(90px);
+    }
+    to{
+        -webkit-transform: translateY(0);
+    }
+}
+@-webkit-keyframes panel-in {
+	0% {
+		-webkit-filter: grayscale(0.8) blur(5px);
+		-webkit-transform: translateY(80px);
+	}
+	50% {
+		-webkit-filter: grayscale(0.3) blur(3px);
+		-webkit-transform: translateY(60px);
+	}
+	100% { 
+		-webkit-filter: none;
+		-webkit-transform: translateY(0);
+	}
+}
+@-webkit-keyframes profile-img-hover {
+	0% {
+		-webkit-transform: rotate(0);
+	}
+	23% { 
+		-webkit-transform: rotate(18deg);
+	}
+	25% { 
+		-webkit-transform: rotate(20deg);
+	}
+	50% { 
+		-webkit-transform: rotate(0);
+	}
+	73% { 
+		-webkit-transform: rotate(-18deg);
+	}
+	75% { 
+		-webkit-transform: rotate(-20deg);
+	}
+	100% { 
+		-webkit-transform: rotate(0);
+	}
+}
+
+@-webkit-keyframes profile-img-active {
+	0% {
+		-webkit-transform: rotate(0);
+	}
+	100% { 
+		-webkit-transform: rotate(365deg);
+	}
+}
+
+/* = 伪类 Pseudo
+--------------------------------------- */
+::-webkit-scrollbar {
+	width: 10px;
+	background: #cacaca url(../images/mooning.png);;
+	opacity: .8;	
+	-webkit-transition: .25s;
+}
+::-webkit-scrollbar-button {
+	width: 10px;
+	height: 5px;
+	-webkit-transition: .25s;
+}
+::-webkit-scrollbar-track {
+	background: #cacaca url(../images/mooning.png);;
+	/* border: thin solid lightgray; 
+	box-shadow: 0px 0px 3px #dfdfdf inset; */
+	border-radius: 10px;
+	-webkit-transition: .25s;
+}
+::-webkit-scrollbar-thumb {
+	background: #969696;
+	/* border: thin solid gray; */
+	border-radius: 10px;
+	-webkit-transition: .25s;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #7d7d7d;
+	-webkit-transition: .25s;
+}
+
+::selection {
+    background:#d3d3d3; 
+    color:#555;
+}
+
+::-moz-selection {
+    background:#d3d3d3; 
+    color:#555;
+}
+
+::-webkit-selection {
+    background:#d3d3d3; 
+    color:#555;
+}

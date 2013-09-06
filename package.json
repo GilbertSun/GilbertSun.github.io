@@ -1,0 +1,21 @@
+{
+  "name": "GilbertPage",
+  "version": "0.0.0",
+  "description": "GilbertSun github personal page",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/GilbertSun/GilbertSun.github.io.git"
+  },
+  "keywords": [
+    "github",
+    "page"
+  ],
+  "author": "GilbertSun",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "0957de1ea598855a60e7b23b688b87b8d938e365"
+}

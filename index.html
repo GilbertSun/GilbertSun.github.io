@@ -1,10 +1,151 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>个人主页-GilbertSun</title>
+  <meta charset="UTF-8">
+  <title>GilbertSun-个人页</title>
+  <!--Boootstrap 框架相关-->
+  <link rel="stylesheet" href="libs/css/bootstrap.css" />
+  <link rel="stylesheet" href="libs/css/bootstrap-responsive.css" />
+  <link rel="stylesheet" href="libs/css/mine.css" />
+  <!--fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript" src="libs/js/jquery.js"></script>
 </head>
-<body>
-  
+<body data-spy="scroll" data-target=".navbar" data-offset="40">
+  <!--尽量展示html5和css3的知识--> 
+  <!--导航条-->
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+
+        <!--responsive nav bar-->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="#Resume">个人简历</a></li>
+            <li><a href="#About-Page">关于本页</a></li>
+            <li><a href="#Contact">联系</a></li>
+          </ul>
+        </div>
+
+        <!--外部的链接-->
+        <ul class="nav">
+          <li><a href="http://www.gcore.net.cn" target="_blank">博客</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!--the banner header-->
+  <header id="banner" class="hero-unit no-radius">
+    <div class="container text-center">
+      <h1>
+        GilbertSun的实验主页
+      </h1>
+    </div> 
+  </header>
+
+  <article class="container">
+    
+    <!--简述 Description-->
+    <section id="Description" class="row description">
+      <div class="span10 offset1 text-center panel-description button-text-panel">
+        <div class="padding-middle">
+          <img src="libs/images/picture.jpg" alt="" class="profile img-circle"/>
+          <h4>孙正斌</h4>
+          <h5>半路出家，野生程序员，热爱计算机技术，吐槽强迫症，美剧控</h5>
+          <hr class="soften" />
+          <p>这是github主页，欢迎访问个人博客<a href="http://www.gcore.net.cn">我的博客</a></p>          
+        </div>
+      </div>
+    </section>
+
+    <!--start 简历 Resume-->
+    <section id="Resume" class="row">
+      <div class="span12 panel">
+        <div class="rows">
+        <!--content-->
+          <div class="span8 offset2">
+            <div class="block-center">
+              <h1 class="text-center">个人简历</h1>
+              <hr class="soften">
+              <h2 class="wmd-title" id="计算机相关工作经历">计算机相关工作经历</h2>
+              <ol>
+                <li>南京魔苹网络科技有限公司
+                  <ul>
+                    <li>职位      : 程序员</li>
+                    <li>工作年限  : 6个月</li>
+                    <li>工作内容
+                      <ul>
+                        <li>维护公司Discuz站群(包括两个Discuz论坛，一个ECshop网站)</li>
+                        <li>Discuz插件的开发（主要是PHP和前端的知识)</li>
+                        <li>配合美工完成公司网站的改版</li>
+                        <li>维护公司服务器及数据库(LAMP)</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>苏州CapBayer三维科技有限公司
+                  <ul>
+                    <li>职位      : 应用开发工程师</li>
+                    <li>工作年限  : 1年</li>
+                    <li>工作内容
+                      <ul>
+                        <li>参与公司游戏创意设计，根据需求划分游戏功能</li>
+                        <li>结合公司的3D引擎(类似unity)开发3D互动游戏</li>
+                        <li>负责游戏中UI的制作</li>
+                        <li>维护公司游戏开发的应用框架库</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+
+              <h2 class="wmd-title" id="工作技能">工作技能</h2>
+              <ul>
+                <li>熟悉JavaScript语言特性，面向对象编程，DOM编程</li>
+                <li>熟悉HTML,CSS。能够根据设计图实现基本的HTML界面</li>
+                <li>熟悉Ajax,有基于Ajax的开发web应用经验</li>
+                <li>了解并一直在学习HTML5/CSS3，NODE相关知识</li>
+                <li>熟悉PHP，有基于PHP编写过手机web站点</li>
+                <li>掌握git/svn的使用</li>
+                <li>掌握编辑器:vim,sublime-text-2</li>
+                <li>熟悉Linux操作，有日常使用Linux的经验</li>
+              </ul>
+
+              <h2 class="wmd-title" id="个人相关">个人相关</h2>
+              <ul>
+                <li>个人网站: <a href="http://www.gcore.net.cn">http://www.gcore.net.cn</a></li>
+                <li>新浪微博: <a href="http://weibo.com/gilbersun">@成天傻乐_Linux</a></li>
+                <li>github:   <a href="https://github.com/GilbertSun">GilbertSun</a></li>
+                <li>email: <a href="mailto:szb4321@gmail.com">szb4321@gmail.com</a></li>
+                <li>手机：18651264363</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end of Resume-->
+    <!--start 关于本页 About-Page-->
+    <section id="About-Page" class="row">
+      <div class="span12 panel text-center button-text-panel">
+        <div class="padding-large">
+          <h1>关于</h1>
+          <hr class="soften" />
+          <p>本站用于github主页，用于个人简历，以及感兴趣的项目的演示</p>
+          <p>网站的基本结构以及CSS样式参考自<a href="http://www.dandyweng.com">翁天信</a></p> 
+        </div>
+      </div> 
+    </section>
+  </article>
+  <script type="text/javascript" src="libs/js/bootstrap.js"></script>
+  <script type="text/javascript" src="libs/js/home.js"></script>
 </body>
 </html>
