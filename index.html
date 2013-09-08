@@ -11,6 +11,7 @@
   <link href="http://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet" type="text/css" />
 
   <script type="text/javascript" src="libs/js/jquery.js"></script>
+  <script type="text/javascript" src="libs/js/jquery-droper.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40">
   <!--尽量展示html5和css3的知识--> 
@@ -29,6 +30,7 @@
         <div class="nav-collapse collapse">
           <ul class="nav">
             <li><a href="#Resume">个人简历</a></li>
+            <li><a href="#project-droper">上传插件</a></li>
             <li><a href="#About-Page">关于本页</a></li>
             <li><a href="#Contact">联系</a></li>
           </ul>
@@ -133,13 +135,27 @@
       </div>
     </section>
     <!--end of Resume-->
+    
+    <!--start of Droper-->
+    <section id="project-droper" class="row">
+      <div class="span12 panel text-center">
+        <div class="padding-large">
+          <h1>jQuery 拖拽上传插件</h1>
+          <div id="drop-area" class="relative">
+            <h3 class="caption">请将文件拖如虚线内</h3>
+            <div class="upload-container"></div>
+          </div>
+        </div>
+      </div> 
+    </section>
+    <!--end of Droper-->
     <!--start 关于本页 About-Page-->
     <section id="About-Page" class="row">
       <div class="span12 panel text-center button-text-panel">
         <div class="padding-large">
           <h1>关于</h1>
           <hr class="soften" />
-          <p>本站用于github主页，用于个人简历，以及感兴趣的项目的演示</p>
+          <p>本站为github主页，用于个人简历，以及感兴趣的项目的演示</p>
           <p>网站的基本结构以及CSS样式参考自<a href="http://www.dandyweng.com">翁天信</a></p> 
         </div>
       </div> 
