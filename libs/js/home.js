@@ -35,6 +35,12 @@ $('#drop-area').droper({
       progress = Math.round(e.loaded/e.total*100) + '%';
       $app.find('.app-progress .bar').width(progress);
     }
+  },
+  uploaded: function(e) {
+    var fileIndex = e.fileIndex,
+        $app = $('.app[data-fileIndex=' + fileIndex +']');
+    
+    $app.find('.app-progress .bar').width('100%');
   }
 })
 }(jQuery));
