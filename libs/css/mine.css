@@ -123,10 +123,14 @@ img.profile{
     translation: 500ms;
 }
 img.profile:hover{
-    -webkit-animation: profile-img-hover 1s ease-out 100ms infinite;
+    -webkit-animation:  profile-img-hover 1s ease-out 100ms infinite;
+    -moz-animation:     profile-img-hover 1s ease-out 100ms infinite;
+    -o-animation:       profile-img-hover 1s ease-out 100ms infinite;
+    animation:          profile-img-hover 1s ease-out 100ms infinite;
 }
 img.profile:active{
     -webkit-animation: profile-img-active 1s ease-out 100ms infinite;
+    -moz-animation: profile-img-active 1s ease-out 100ms infinite;
 }
 
 .app {
@@ -212,7 +216,7 @@ img.profile:active{
 	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
 	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);  
 	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
-	box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
 }
 
 .panel-description h4{
@@ -314,6 +318,29 @@ img.profile:active{
 		-webkit-transform: rotate(0);
 	}
 }
+@-moz-keyframes profile-img-hover {
+	0% {
+		-moz-transform: rotate(0);
+	}
+	23% { 
+		-moz-transform: rotate(18deg);
+	}
+	25% { 
+		-moz-transform: rotate(20deg);
+	}
+	50% { 
+		-moz-transform: rotate(0);
+	}
+	73% { 
+		-moz-transform: rotate(-18deg);
+	}
+	75% { 
+		-moz-transform: rotate(-20deg);
+	}
+	100% { 
+		-moz-transform: rotate(0);
+	}
+}
 
 @-webkit-keyframes profile-img-active {
 	0% {
@@ -321,6 +348,14 @@ img.profile:active{
 	}
 	100% { 
 		-webkit-transform: rotate(365deg);
+	}
+}
+@-moz-keyframes profile-img-active {
+	0% {
+		-moz-transform: rotate(0);
+	}
+	100% { 
+		-moz-transform: rotate(365deg);
 	}
 }
 
