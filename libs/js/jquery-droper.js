@@ -9,27 +9,25 @@
 (function addXhrProgressEvent() {
   var originXhr = $.ajaxSettings.xhr;
   $.ajaxSetup({
-    progress: function() {
-      console.log("standard progress callback");
-    },
     uploadProgress: function() {
-      console.log("standard upload progress callback");
+      console.log('standard upload progress callback');
+    },
+    uploaded: function() {
+      console.log('standard uploaded');
     },
     xhr: function() {
       var xhr = originXhr(),
           self = this;
-      if(xhr) {
-        if(typeof xhr.addEventListener === "function") {
-          xhr.addEventListener('progress', function(e) {
-            self.progress(e);
-          }, false);  
-          
-          if(xhr.upload) {
-            xhr.upload.addEventListener('progress', function(e) {
-              self.uploadProgress(e);
-            }, false);
-          }
-        }
+      if(xhr && xhr.upload) {
+        xhr.upload.addEventListener('progress', function(e) {
+          e.fileIndex = self.fileIndex;
+          self.uploadProgress(e);
+        }, false);
+
+        xhr.upload.addEventListener('load', function(e) {
+          e.fileIndex = self.fileIndex;
+          self.uploaded(e);
+        }, false);
       }
       return xhr;
     }
@@ -52,7 +50,8 @@
     init: function() {
       var $droperElement = this.$element,
           options = this.options,
-          self = this;
+          self = this,
+          fileIndex = 0;
       $droperElement.on('dragenter', function(e) {
         e.preventDefault();
         $(this).addClass(options.hoverClass);
@@ -67,13 +66,21 @@
         $(this).removeClass(options.hoverClass);
       });
       $droperElement.on('drop', function(e) {
-        var files;
+        var files = e.dataTransfer.files,
+            i, length;
         e.preventDefault();
         $(this).removeClass(options.hoverClass);
+
+        // 给每个文件加上唯一的Index
+        for(i = 0, length = files.length; i < length; i++) {
+          files[i].fileIndex = fileIndex++;  
+        }
+
         options.drop.call(this, e);
         
-        if(!options.url) return;
-        files = e.dataTransfer.files;
+        if(!options.url) {
+          return;
+        }
         self.upload(files);
       });
     },
@@ -89,7 +96,10 @@
           data: formdata,
           processData: false,
           contentType: false,
-          success: options.ajaxSuccess
+          success: options.ajaxSuccess,
+          uploadProgress: options.uploadProgress,
+          uploaded: options.uploaded,
+          fileIndex: files[i].fileIndex
         });
       }
     }
@@ -114,7 +124,8 @@
     dragleave:empty,
     drop: empty,
     beforeUpload: empty,
-    uploadProcess: empty,
+    uploadProgress: empty,
+    uploaded: empty,
     ajaxSuccess: empty,
     url: '',
     name: 'droper',

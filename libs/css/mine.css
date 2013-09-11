@@ -128,6 +128,45 @@ img.profile:hover{
 img.profile:active{
     -webkit-animation: profile-img-active 1s ease-out 100ms infinite;
 }
+
+.app {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+.app img{
+  width: 100px;
+  height: 100px;
+}
+
+.app-progress{
+  width: 90%;
+  height: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  margin-top: -5px;
+  margin-left: -1px;
+}
+
+.app-progress .bar{
+  background-color: #0e90d2;
+  background-clip: padding-box;
+  height: 100%;
+  transition:width .6s ease;
+  width:0;
+}
+
+.app .remove{
+  position: absolute;
+  top:2px;
+  right:2px;
+  background:gray;
+  border-radius: 14px;
+}
 /* = 框架 Panels
 -----------------------------------*/
 .panel{
@@ -204,12 +243,14 @@ img.profile:active{
     border: 4px dashed #ddd; 
 }
 #project-droper #drop-area .caption{
-    margin-top: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -110px;
 }
 #project-droper #drop-area .upload-container{
-    position: absolute;
-    top:0px;
-    left:0px;
+    position: relative;
     padding:10px;
 }
 #project-droper #drop-area.drag-hover{
